@@ -1,0 +1,2 @@
+TODO - Build graph of nodes
+TODO - Get list of coins from server
