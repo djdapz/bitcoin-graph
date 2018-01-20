@@ -4,7 +4,7 @@ data class HitBtcSymbol(
         val id: String,
         val baseCurrency: String,
         val quoteCurrency: String,
-        val quantityIncrement: Int,
+        val quantityIncrement: Double,
         val tickSize: Double,
         val takeLiquidityRate: Double,
         val provideLiquidityRate: Double,

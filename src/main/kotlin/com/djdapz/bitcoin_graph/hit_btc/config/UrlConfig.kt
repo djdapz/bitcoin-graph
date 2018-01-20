@@ -5,4 +5,5 @@ import java.net.URL
 interface UrlConfig {
     fun getSymbolsUrl() : URL
     fun getTickerUrl(): URL
+    fun getCurrencyUrl(): URL
 }

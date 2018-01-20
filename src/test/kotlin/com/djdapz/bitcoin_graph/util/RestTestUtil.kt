@@ -11,7 +11,7 @@ import org.springframework.util.LinkedMultiValueMap
 import org.springframework.web.client.RestTemplate
 
 
-fun <T> verifyJsonGetList(
+inline fun <reified T> verifyJsonGetList(
         restTemplate: RestTemplate,
         url: String
 ) {
@@ -23,7 +23,7 @@ fun <T> verifyJsonGetList(
             eq(url),
             eq(HttpMethod.GET),
             eq(HttpEntity<Any>(headers)),
-            eq(ReturnType<T>())
+            eq(object : ParameterizedTypeReference<List<T>>() {})
     )
 }
 
