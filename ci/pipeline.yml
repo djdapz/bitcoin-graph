@@ -1,0 +1,15 @@
+---
+resources:
+- name: bitcoin-graph
+  type: git
+  source:
+    uri: https://github.com/djdapz/bitcoin-graph.git
+
+jobs:
+- name: run-unit-tests
+  public: true
+  plan:
+  - get: bitcoin-graph
+    trigger: true
+  - task: unit-tests
+    file: bitcoin-graph/concourse/run-unit-tests.yml

@@ -1,0 +1,23 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source: {repository: openjdk, tag: 8-jdk-alpine}
+
+#caches:
+#- path: stubhub-scraper/.gradle
+
+
+inputs:
+- name: bitcoin-graph
+
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    ls -lsa
+    cd bitcoin-graph
+    ls -lsa
+    ./gradlew clean test
