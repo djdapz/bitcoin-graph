@@ -13,3 +13,6 @@ jobs:
     trigger: true
   - task: unit-tests
     file: bitcoin-graph/concourse/run-unit-tests.yml
+  - task: deploy-to-pcf
+    file: bitcoin-graph/concourse/deploy-to-pcf.yml
+
